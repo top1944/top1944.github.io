@@ -2,7 +2,7 @@
   "name": "学习 探索 分享",
   "ver": "",
   "logo": "pic/exbot_logo.png",
-  "testing": true,
-  "page-mounts": true,
-  "github-url": "https://github.com/top1944/top1944.github.io"
+  "testing": false,
+  "page-mounts": false
+
 }
