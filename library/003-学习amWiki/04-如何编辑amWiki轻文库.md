@@ -36,7 +36,7 @@
 6. ##### 如果需要在 Markdown 文档中插入图片，**请先截图**，然后在文档对应位置使用快捷键：`Ctrl + Shift + V`
     此时，光标位置将多出一段 Markdown 图片代码，例如：
 
-        ![](/top1944/top1944/wiki/images/001/04-b7efbbde.png)
+        ![](assets/001/04-b7efbbde.png)
 
     同时，将在项目目录依次创建文件夹 assets、001 (如果不存在的话)，以及此文件夹下名称为 04-b7efbbde.png 的图片文件
 
