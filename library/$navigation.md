@@ -23,7 +23,11 @@
 ##### 开发环境
 - [网页-Atom+Jekyll](?file=011-开发环境/001-网页-Atom+Jekyll "网页-Atom+Jekyll")
 - [Ubuntu16安装搜狗输入法](?file=011-开发环境/002-Ubuntu16安装搜狗输入法 "Ubuntu16安装搜狗输入法")
-- [错误修复](?file=011-开发环境/010-错误修复 "错误修复")
+- [xp安装python](?file=011-开发环境/010-xp安装python "xp安装python")
+
+##### 程序开发
+- [python3+pyCharm+pyQT](?file=012-程序开发/001-python3+pyCharm+pyQT "python3+pyCharm+pyQT")
+- [pipy更改源](?file=012-程序开发/002-pipy更改源 "pipy更改源")
 
 ##### 学习amWiki
 - [amWiki轻文库简介](?file=013-学习amWiki/01-amWiki轻文库简介 "amWiki轻文库简介")
