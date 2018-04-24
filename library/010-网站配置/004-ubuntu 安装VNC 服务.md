@@ -1,23 +1,23 @@
-http://community.bwbot.org/topic/191/ubuntu-%E5%AE%89%E8%A3%85vnc-%E6%9C%8D%E5%8A%A1
+﻿http://community.bwbot.org/topic/191/ubuntu-%E5%AE%89%E8%A3%85vnc-%E6%9C%8D%E5%8A%A1
 
-ubuntu ��װVNC ����
+ubuntu 安装VNC 服务
 
  
-����Ubuntu��ʱ�򾭳���ҪԶ���������ӣ���õ���������VNC��VNC��һ�����ŵ�Э�飬ʵ�ֵĿͻ����кܶࡣ���ǱȽϸ���ʵ��֮��Ŀǰ��õľ���x11vnc��������򲻽����շѣ��ǿ�Դ�ģ����һ�֧��opengl���򡣱���rviz֮��ĳ���Ҳ�����������ˡ�
+在用Ubuntu的时候经常需要远程桌面连接，最常用的软件就是VNC。VNC是一个开放的协议，实现的客户端有很多。但是比较各个实现之后，目前最好的就是x11vnc。这个程序不仅不收费，是开源的，而且还支持opengl程序。比如rviz之类的程序也可以正常打开了。
 
-�������һ�°�װ��������������Ubuntu 14.04Ϊ���ӣ������16.04���Ժ�汾Ҫ�����������ļ�Ҫ����Ӧ�޸ġ�
+下面介绍一下安装方法。下面是以Ubuntu 14.04为例子，如果是16.04及以后版本要做服务配置文件要做对应修改。
 
-��װx11vnc
+安装x11vnc
 
 sudo apt-get install x11vnc -y
 
-���÷�������
+设置访问密码
 
 sudo x11vnc -storepasswd /etc/x11vnc.pass 
 
-���������ļ�
+创建服务文件
 
-��/etc/init �´���һ��x11vnc.conf���ļ����ļ���������
+在/etc/init 下创建一个x11vnc.conf的文件，文件内容如下
 
 description "xiaoqiang vnc server"
 
@@ -31,22 +31,22 @@ script
 
 end script
 
-��������
+启动服务
 
 sudo service x11vnc start
 
-���ʷ���
+访问服务
 
-����һ��vnc�ͻ���,�������������
+下载一个vnc客户端,比如从这里下载
 
 https://www.realvnc.com/en/connect/download/viewer/
 
-�򿪿ͻ���
+打开客户端
 
-����Ŀ��IP�����Ӻ��������룬֮��Ϳ������������ˡ�
+输入目标IP，连接后输入密码，之后就可以正常连接了。
 
-����16.04�汾�͸��°汾��Ubuntu�����԰�������ļ��ķ�����������
+对于16.04版本和更新版本的Ubuntu，可以按照这个文件的方法进行配置
 
 https://github.com/longhr/ubuntu1604hub/blob/master/ubuntu1604VNC.sh
 
-ע�ⰲװ���֮���ڲ�����ʾ��ʹ��rvizʱ���ǻᱨ������ʱ�����hdmiתvga��ת��ͷ��������ʾ����ֻ��ת��ͷ���Ϳ��Դ�����ʹ���ˡ������Ҫ�����ֱ��ʿ����������������÷ֱ���һ����������������е���
+注意安装完成之后在不插显示器使用rviz时还是会报错。这时后插上hdmi转vga的转接头（不接显示器，只是转接头）就可以打开正常使用了。如果想要调整分辨率可以像正常电脑设置分辨率一样，在设置里面进行调整
